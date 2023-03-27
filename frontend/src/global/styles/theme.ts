@@ -3,7 +3,7 @@ export default {
     default_white: "#fff",
     default_text: "#2F2E41",
     default_background: "#2F2E41",
-    background_btn: "#2F2E41",
+    background_btn: "#009EDD",
     background_btn_act: "#039B00",
   },
   shape: {
