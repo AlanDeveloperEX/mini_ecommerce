@@ -1,4 +1,3 @@
-import { Router, Route, Routes } from "react-router-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GlobalStyles from "./global/styles/global";
 import allRoutes from "./routes";
