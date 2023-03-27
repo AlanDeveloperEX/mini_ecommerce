@@ -1,11 +1,15 @@
+import { Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GlobalStyles from "./global/styles/global";
-import Home from "./pages/Home";
+import allRoutes from "./routes";
+
+const router = createBrowserRouter(allRoutes);
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Home />;
+      <RouterProvider router={router} />
     </>
   );
 }

@@ -1,14 +1,14 @@
 import { DefaultLayout } from "../_layout/DefaultLayout";
 import * as S from "./styles";
 
-const Home = () => {
+const Checkout = () => {
   return (
     <DefaultLayout>
       <S.MainContainer>
-        <p>Home</p>
+        <p>Checkout</p>
       </S.MainContainer>
     </DefaultLayout>
   );
 };
 
-export default Home;
+export default Checkout;

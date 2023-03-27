@@ -3,5 +3,10 @@ interface DefaultLayout {
 }
 
 export const DefaultLayout: React.FC<DefaultLayout> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <>
+      <h1>MENU</h1>
+      {children}
+    </>
+  );
 };

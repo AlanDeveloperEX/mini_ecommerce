@@ -1,14 +1,14 @@
 import { DefaultLayout } from "../_layout/DefaultLayout";
 import * as S from "./styles";
 
-const Home = () => {
+const NotFound = () => {
   return (
     <DefaultLayout>
       <S.MainContainer>
-        <p>Home</p>
+        <p>Ops! Por favor, tente novamente.</p>
       </S.MainContainer>
     </DefaultLayout>
   );
 };
 
-export default Home;
+export default NotFound;
