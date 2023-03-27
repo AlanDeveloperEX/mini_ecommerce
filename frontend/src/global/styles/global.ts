@@ -8,6 +8,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
     font-family: 'Roboto Medium',sans-serif;
+    color:  ${theme.colors.default_text};
   }
 
   html {

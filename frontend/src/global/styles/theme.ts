@@ -13,5 +13,9 @@ export default {
     buttons: {
       default: "padding: 8px; border-radius: 4px; height: 40px;",
     },
+    loading: {
+      default:
+        "border: 0.2rem solid #ffffff; border-left: 0.2rem solid #ffffffa6; border-bottom: 0.2rem solid #e9e9e95c; border-right: 0.2rem solid #ffffff33; border-top: 0.2rem solid transparent;",
+    },
   },
 };
