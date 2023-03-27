@@ -6,7 +6,7 @@ export const DefaultLayout: React.FC<DefaultLayout> = ({ children }) => {
   return (
     <>
       <h1>MENU</h1>
-      {children}
+      <main>{children}</main>
     </>
   );
 };
