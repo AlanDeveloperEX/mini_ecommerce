@@ -1,11 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import * as S from "./styles";
 import { GiBeachBag } from "react-icons/gi";
 
 const Header = () => {
+  const navigateTo = useNavigate();
+
+  const handleCart = () => navigateTo("/checkout");
+  const handleHome = () => navigateTo("/");
   return (
     <S.Container>
-      <S.Logo>{import.meta.env.VITE_APP_PAGE_TITLE}</S.Logo>
-      <S.CartIconContainer>
+      <S.Logo onClick={handleHome}>
+        {import.meta.env.VITE_APP_PAGE_TITLE}
+      </S.Logo>
+      <S.CartIconContainer onClick={handleCart}>
         <div>
           <p>Meu Carrinho</p>
           <span>0 Itens</span>

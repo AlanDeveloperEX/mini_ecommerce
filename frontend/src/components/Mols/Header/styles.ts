@@ -23,6 +23,10 @@ export const Logo = styled.p`
     font-size: 20px;
 
     color: ${theme.colors.default_white};
+
+    &:hover {
+      cursor: pointer;
+    }
   `}
 `;
 

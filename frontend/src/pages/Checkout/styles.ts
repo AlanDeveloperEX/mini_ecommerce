@@ -5,6 +5,5 @@ export const MainContainer = styled.section`
     background: ${theme.colors.default_background};
     min-height: 250px;
     padding: 20px;
-    ${theme.shape.cards.default};
   `}
 `;
