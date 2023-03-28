@@ -1,19 +1,22 @@
+import { convertNumberToBRL } from "../../../utils/numberToBRL";
 import Button from "../../Atoms/Button";
 import * as S from "./styles";
 
-type CardProps = {};
+type CardProps = {
+  Title: string;
+  imgToShow: string;
+  imgAlt: string;
+  priceItem: number;
+};
 
-const Card: React.FC<CardProps> = ({}) => {
+const Card: React.FC<CardProps> = ({ Title, imgToShow, imgAlt, priceItem }) => {
   return (
     <S.Container>
       <figure>
-        <S.ImgCard
-          src="https://wefit-react-web-test.s3.amazonaws.com/eternals.png"
-          alt="Viuva Negra"
-        />
+        <S.ImgCard src={imgToShow} alt={imgAlt} />
       </figure>
-      <S.TitleCard>Viuva Negra</S.TitleCard>
-      <S.PriceCard>R$ 14,50</S.PriceCard>
+      <S.TitleCard>{Title}</S.TitleCard>
+      <S.PriceCard>{convertNumberToBRL(priceItem)}</S.PriceCard>
       <Button>Adicionar ao Carrinho</Button>
     </S.Container>
   );

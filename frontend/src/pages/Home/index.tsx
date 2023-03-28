@@ -15,6 +15,7 @@ const Home: React.FC = () => {
     api
       .get("/products")
       .then((response) => {
+        console.log(response.data);
         setMovieProductItems(response.data);
       })
       .catch((error) => console.log(error))
@@ -41,7 +42,13 @@ const Home: React.FC = () => {
         <S.MainContainer>
           {movieProductItems !== null &&
             movieProductItems.map((item: any, key: number) => (
-              <Card key={key} />
+              <Card
+                key={key}
+                Title={item.title}
+                imgToShow={item.image}
+                imgAlt={item.title}
+                priceItem={item.price}
+              />
             ))}
         </S.MainContainer>
       )}
