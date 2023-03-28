@@ -7,6 +7,7 @@ export const Container = styled.header`
     align-items: center;
     flex-direction: row;
     gap: 10px;
+    margin-bottom: 20px;
 
     padding: 18px 10px;
 
@@ -30,7 +31,6 @@ export const CartIconContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
 
     &:hover {
       cursor: pointer;
