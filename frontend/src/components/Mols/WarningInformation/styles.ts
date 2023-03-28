@@ -35,5 +35,6 @@ export const WrapBtnContainer = styled.div`
 export const ImgCard = styled.img`
   ${({ theme }) => css`
     width: 350px;
+    height: 240px;
   `}
 `;
