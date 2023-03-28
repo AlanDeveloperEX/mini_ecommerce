@@ -16,6 +16,7 @@ export const Container = styled.div<ContainerProps>`
     gap: 10px;
 
     width: 100%;
+    height: fit-content;
   `}
 `;
 

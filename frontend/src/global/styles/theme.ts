@@ -13,7 +13,7 @@ export default {
     },
     buttons: {
       default:
-        "padding: 8px; border-radius: 4px; height: 40px; font-size: 12px; font-weight: 700;text-transform: uppercase; letter-spacing: 1px;",
+        "padding: 8px; border-radius: 4px; height: 40px; font-size: 12px; font-weight: 700;text-transform: uppercase;",
     },
     loading: {
       default:
@@ -21,6 +21,7 @@ export default {
     },
   },
   breakpoints: {
+    xs: 768,
     sm: 980,
     md: 1280,
     lg: 1440,
