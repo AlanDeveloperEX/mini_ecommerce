@@ -9,6 +9,9 @@ export const Container = styled.button<ContainerProps>`
   ${({ theme, customStyle, enabled }) => css`
     background: ${theme.colors.background_btn};
     color: ${theme.colors.default_white};
+
+    ${theme.shape.buttons.default};
+
     opacity: 1;
     transition: all 0.2s;
 
@@ -19,13 +22,7 @@ export const Container = styled.button<ContainerProps>`
     border: none;
     border-radius: 6px;
 
-    height: 40px;
     width: 100%;
-
-    padding: 0 16px;
-    margin-top: 16px;
-
-    font-size: 14px;
 
     &:hover {
       opacity: 0.9;

@@ -8,10 +8,11 @@ export default {
   },
   shape: {
     cards: {
-      default: "border-radius: 4px; padding: 10px 12px;",
+      default: "padding: 10px 12px; border-radius: 4px;",
     },
     buttons: {
-      default: "padding: 8px; border-radius: 4px; height: 40px;",
+      default:
+        "padding: 8px; border-radius: 4px; height: 40px; font-size: 12px; font-weight: 700;text-transform: uppercase; letter-spacing: 1px;",
     },
     loading: {
       default:
