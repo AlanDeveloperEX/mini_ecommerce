@@ -1,12 +1,15 @@
+import Header from "../../components/Mols/Header";
+import * as S from "./styles";
+
 interface DefaultLayout {
   children: JSX.Element;
 }
 
 export const DefaultLayout: React.FC<DefaultLayout> = ({ children }) => {
   return (
-    <>
-      <h1>MENU</h1>
+    <S.DefaultContainer>
+      <Header />
       <main>{children}</main>
-    </>
+    </S.DefaultContainer>
   );
 };
