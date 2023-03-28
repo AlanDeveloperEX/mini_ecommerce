@@ -15,7 +15,6 @@ const Home: React.FC = () => {
     api
       .get("/products")
       .then((response) => {
-        console.log(response.data);
         setMovieProductItems(response.data);
       })
       .catch((error) => console.log(error))

@@ -6,7 +6,7 @@ import SuccessImg from "../../assets/success_purchase.svg";
 import EmptyImg from "../../assets/empty_cart.svg";
 
 const Checkout: React.FC = () => {
-  const [showWarning, setShowWarning] = useState<string>("vazio");
+  const [showWarning, setShowWarning] = useState<string>("success");
 
   switch (showWarning) {
     case "vazio":

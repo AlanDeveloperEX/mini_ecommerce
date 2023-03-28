@@ -15,6 +15,7 @@ export const MainContainer = styled.section`
       color: ${theme.colors.default_text};
       font-weight: 700;
       font-size: 20px;
+      text-align: center;
     }
   `}
 `;
