@@ -10,8 +10,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  loading = true,
-  customStyle = "green",
+  loading,
+  customStyle = "",
   enabled = true,
   ...rest
 }) => {

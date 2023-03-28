@@ -6,52 +6,46 @@ interface ContainerProps {
 }
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, customStyle }) => css`
+  ${({ theme, customStyle, enabled }) => css`
     background: ${theme.colors.background_btn};
     color: ${theme.colors.default_white};
+    opacity: 1;
+    transition: all 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 6px;
+
+    height: 40px;
+    width: 100%;
+
+    padding: 0 16px;
+    margin-top: 16px;
+
+    font-size: 14px;
 
     &:hover {
-      background: ${theme.colors.background_btn_act};
+      opacity: 0.9;
       cursor: pointer;
     }
 
-    ${customStyle === "green" &&
-    css`
-      background: #039b00;
-    `}
-  `}
+    &:disabled {
+      opacity: 0.7;
+      pointer-events: none;
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: none;
-  border-radius: 6px;
-
-  height: 40px;
-  width: 100%;
-
-  padding: 0 16px;
-  margin-top: 16px;
-  transition: background-color 0.2s;
-
-  font-size: 14px;
-
-  &:disabled {
-    opacity: 0.7;
-    pointer-events: none;
-  }
-
-  ${(props) =>
-    props.enabled === false &&
+    ${enabled === false &&
     css`
       opacity: 0.4;
       pointer-events: none;
     `}
 
-  ${(props) =>
-    props.customStyle === "green" &&
+    ${customStyle === "green" &&
     css`
-      background: #039b00;
+      background: ${theme.colors.background_btn_act};
     `}
+  `}
 `;
