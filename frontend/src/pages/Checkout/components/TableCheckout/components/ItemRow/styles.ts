@@ -35,6 +35,11 @@ export const TdProductItem = styled.td`
         cursor: pointer;
       }
     }
+
+    @media (max-width: ${theme.breakpoints.sm}px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   `}
 `;
 
@@ -50,6 +55,11 @@ export const ImgColumn = styled.img`
   ${({ theme }) => css`
     width: 90px;
     margin-right: 50px;
+
+    @media (max-width: ${theme.breakpoints.sm}px) {
+      width: 90px;
+      margin-right: 16px;
+    }
   `}
 `;
 

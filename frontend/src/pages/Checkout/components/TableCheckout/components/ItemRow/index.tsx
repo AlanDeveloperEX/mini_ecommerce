@@ -19,13 +19,6 @@ const ItemRow: React.FC<any> = ({ id }) => {
 
   const qtyItem = getItemQuantity(id);
 
-  const handleInputChange = (value: number | string) => {
-    if (value > qtyItem) {
-      increaseCartQuantity(id);
-    } else {
-      decreaseCartQuantity(id);
-    }
-  };
   return (
     <tr>
       <S.TdProductItem>
@@ -37,12 +30,7 @@ const ItemRow: React.FC<any> = ({ id }) => {
       </S.TdProductItem>
       <S.TdProductItem>
         <AiOutlineMinusCircle onClick={() => decreaseCartQuantity(id)} />
-        <S.InputColumn
-          type="text"
-          name="qty"
-          onChange={(e) => handleInputChange(e.target.value)}
-          value={qtyItem}
-        />
+        <S.InputColumn type="text" name="qty" value={qtyItem} readOnly />
         <AiOutlinePlusCircle onClick={() => increaseCartQuantity(id)} />
       </S.TdProductItem>
       <S.TdProductItem>

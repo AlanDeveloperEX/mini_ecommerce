@@ -7,6 +7,10 @@ export const MainContainer = styled.div`
     @media (max-width: ${theme.breakpoints.sm}px) {
       overflow-x: hidden;
       overflow-y: auto;
+
+      thead {
+        display: none;
+      }
     }
   `}
 `;
