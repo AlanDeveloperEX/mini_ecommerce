@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
   priceItem,
   id,
 }) => {
-  const { getItemQuantity } = useShoppingCart();
+  const { getItemQuantity, increaseCartQuantity } = useShoppingCart();
   const qtdy = getItemQuantity(id);
   return (
     <S.Container>
@@ -29,14 +29,14 @@ const Card: React.FC<CardProps> = ({
       <S.TitleCard>{Title}</S.TitleCard>
       <S.PriceCard>{convertNumberToBRL(priceItem)}</S.PriceCard>
       {qtdy === 0 ? (
-        <Button>
+        <Button onClick={() => increaseCartQuantity(id)}>
           <S.CartBtnQty>
             <MdAddShoppingCart /> {qtdy}
           </S.CartBtnQty>
           Adicionar ao Carrinho
         </Button>
       ) : (
-        <Button customStyle="green">
+        <Button onClick={() => increaseCartQuantity(id)} customStyle="green">
           <S.CartBtnQty>
             <MdAddShoppingCart /> {qtdy}
           </S.CartBtnQty>
