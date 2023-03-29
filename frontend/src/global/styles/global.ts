@@ -11,7 +11,7 @@ export default createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6, p, span {
-    color:  ${theme.colors.default_text};
+    color: ${theme.colors.default_text};
 
   }
 
@@ -22,5 +22,26 @@ export default createGlobalStyle`
 
   body {
     background: ${theme.colors.default_background};
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: ${theme.colors.default_blue} ${theme.colors.default_white};
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: ${theme.colors.default_white};
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.default_blue};
+    border: 3px solid ${theme.colors.default_white};
   }
 `;
