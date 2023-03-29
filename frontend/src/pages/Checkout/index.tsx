@@ -13,9 +13,11 @@ const Checkout: React.FC = () => {
   const { cartItems, resetCart } = useShoppingCart();
 
   useEffect(() => {
-    cartItems.length === 0 &&
-      showWarning !== "success" &&
-      setShowWarning((state) => (state = "empty"));
+    cartItems.length === 0 && showWarning !== "success"
+      ? setShowWarning((state) => (state = "empty"))
+      : cartItems.length > 0 && showWarning !== "success"
+      ? setShowWarning((state) => (state = "checkout"))
+      : null;
   }, [cartItems.length]);
 
   const HandleCheckout = () => {
@@ -48,7 +50,7 @@ const Checkout: React.FC = () => {
           />
         </DefaultLayout>
       );
-    default:
+    case "checkout":
       return (
         <DefaultLayout>
           <S.MainContainer>
@@ -63,6 +65,8 @@ const Checkout: React.FC = () => {
           </S.MainContainer>
         </DefaultLayout>
       );
+    default:
+      return <DefaultLayout>{<></>}</DefaultLayout>;
   }
 };
 

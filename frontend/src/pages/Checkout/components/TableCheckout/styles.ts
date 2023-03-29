@@ -3,6 +3,11 @@ import styled, { css } from "styled-components";
 export const MainContainer = styled.div`
   ${({ theme }) => css`
     width: 100%;
+
+    @media (max-width: ${theme.breakpoints.sm}px) {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
   `}
 `;
 

@@ -8,8 +8,14 @@ export const MainContainer = styled.section`
     align-items: center;
     justify-content: center;
     padding: 24px;
-
     border-radius: 4px;
+
+    @media (max-width: ${theme.breakpoints.sm}px) {
+      padding: 16px;
+      height: 86vh;
+      overflow: hidden;
+      justify-content: space-between;
+    }
   `}
 `;
 
@@ -39,6 +45,16 @@ export const TotalContainer = styled.div`
 
     button {
       max-width: 235px;
+    }
+
+    @media (max-width: ${theme.breakpoints.sm}px) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 14px;
+
+      button {
+        max-width: 100%;
+      }
     }
   `}
 `;
