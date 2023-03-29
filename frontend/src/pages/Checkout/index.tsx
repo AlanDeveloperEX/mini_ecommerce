@@ -11,12 +11,12 @@ const Checkout: React.FC = () => {
   const [showWarning, setShowWarning] = useState<string>("");
 
   switch (showWarning) {
-    case "vazio":
+    case "empty":
       return (
         <DefaultLayout>
           <WarningInformation
             TextInformation="Parece que não há nada por aqui :("
-            imgToShow={SuccessImg}
+            imgToShow={EmptyImg}
             imgAlt="Empty"
             btnTo="/"
             btnText="Voltar"
@@ -28,7 +28,7 @@ const Checkout: React.FC = () => {
         <DefaultLayout>
           <WarningInformation
             TextInformation="Compra realizada com sucesso!"
-            imgToShow={EmptyImg}
+            imgToShow={SuccessImg}
             imgAlt="Success"
             btnTo="/"
             btnText="Voltar"
