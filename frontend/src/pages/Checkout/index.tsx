@@ -7,16 +7,21 @@ import EmptyImg from "../../assets/empty_cart.svg";
 import TableCheckout from "./components/TableCheckout";
 import Button from "../../components/Atoms/Button";
 import { useShoppingCart } from "../../context/CartContext";
-import { useProducts } from "../../context/ProductsContext";
 
 const Checkout: React.FC = () => {
   const [showWarning, setShowWarning] = useState<string>("");
-  const { cartItems } = useShoppingCart();
-  const { movieProductItems } = useProducts();
+  const { cartItems, resetCart } = useShoppingCart();
 
   useEffect(() => {
-    cartItems.length === 0 && setShowWarning((state) => (state = "empty"));
+    cartItems.length === 0 &&
+      showWarning !== "success" &&
+      setShowWarning((state) => (state = "empty"));
   }, [cartItems.length]);
+
+  const HandleCheckout = () => {
+    setShowWarning((state) => (state = "success"));
+    resetCart();
+  };
 
   switch (showWarning) {
     case "empty":
@@ -49,11 +54,7 @@ const Checkout: React.FC = () => {
           <S.MainContainer>
             <TableCheckout />
             <S.TotalContainer>
-              <Button
-                onClick={() => setShowWarning((state) => (state = "success"))}
-              >
-                FINALZIAR PEDIDO
-              </Button>
+              <Button onClick={HandleCheckout}>FINALZIAR PEDIDO</Button>
               <p>
                 <span>TOTAL</span>
                 R$ 29,99

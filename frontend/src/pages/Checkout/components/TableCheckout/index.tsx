@@ -24,10 +24,12 @@ const TableCheckout = () => {
             </th>
           </tr>
         </thead>
-        {cartItems.length !== 0 &&
-          cartItems.map((item: any, key: number) => (
-            <ItemRow key={key} {...item} />
-          ))}
+        <tbody>
+          {cartItems.length !== 0 &&
+            cartItems.map((item: any, key: number) => (
+              <ItemRow key={key} {...item} />
+            ))}
+        </tbody>
       </S.TableStyled>
     </S.MainContainer>
   );

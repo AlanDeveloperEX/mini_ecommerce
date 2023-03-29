@@ -47,7 +47,7 @@ const ItemRow: React.FC<any> = ({ id }) => {
       </S.TdProductItem>
       <S.TdProductItem>
         <div className="subtotal">
-          <span>R$ 29,99</span>
+          <span>{convertNumberToBRL(item.price * qtyItem)}</span>
           <FaTrash onClick={() => removeFromCart(id)} />
         </div>
       </S.TdProductItem>
