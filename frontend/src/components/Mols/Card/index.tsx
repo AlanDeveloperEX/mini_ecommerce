@@ -2,16 +2,25 @@ import { convertNumberToBRL } from "../../../utils/numberToBRL";
 import Button from "../../Atoms/Button";
 import * as S from "./styles";
 import { MdAddShoppingCart } from "react-icons/md";
+import { useShoppingCart } from "../../../context/CartContext";
 
 type CardProps = {
   Title: string;
   imgToShow: string;
   imgAlt: string;
   priceItem: number;
+  id: number;
 };
 
-const Card: React.FC<CardProps> = ({ Title, imgToShow, imgAlt, priceItem }) => {
-  let qtdy = 0;
+const Card: React.FC<CardProps> = ({
+  Title,
+  imgToShow,
+  imgAlt,
+  priceItem,
+  id,
+}) => {
+  const { getItemQuantity } = useShoppingCart();
+  const qtdy = getItemQuantity(id);
   return (
     <S.Container>
       <figure>

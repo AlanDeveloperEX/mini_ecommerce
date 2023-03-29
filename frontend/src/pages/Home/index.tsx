@@ -47,6 +47,7 @@ const Home: React.FC = () => {
                 imgToShow={item.image}
                 imgAlt={item.title}
                 priceItem={item.price}
+                id={item.id}
               />
             ))}
         </S.MainContainer>
