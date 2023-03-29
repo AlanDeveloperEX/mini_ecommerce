@@ -5,6 +5,7 @@ import * as S from "./styles";
 import SuccessImg from "../../assets/success_purchase.svg";
 import EmptyImg from "../../assets/empty_cart.svg";
 import TableCheckout from "./components/TableCheckout";
+import Button from "../../components/Atoms/Button";
 
 const Checkout: React.FC = () => {
   const [showWarning, setShowWarning] = useState<string>("");
@@ -39,6 +40,13 @@ const Checkout: React.FC = () => {
         <DefaultLayout>
           <S.MainContainer>
             <TableCheckout />
+            <S.TotalContainer>
+              <Button>FINALZIAR PEDIDO</Button>
+              <p>
+                <span>TOTAL</span>
+                R$ 29,99
+              </p>
+            </S.TotalContainer>
           </S.MainContainer>
         </DefaultLayout>
       );

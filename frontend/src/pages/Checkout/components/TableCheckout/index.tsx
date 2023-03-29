@@ -40,6 +40,75 @@ const TableCheckout = () => {
             </div>
           </S.TdProductItem>
         </tr>
+        <tr>
+          <S.TdProductItem>
+            <S.ImgColumn
+              src="https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png"
+              alt="exemple"
+            />
+            <div>
+              <span>Viuva Negra</span>
+              <span className="price">R$ 29,99</span>
+            </div>
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <AiOutlineMinusCircle />
+            <S.InputColumn type="text" name="qty" value={1} />
+            <AiOutlinePlusCircle />
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <div className="subtotal">
+              <span>R$ 29,99</span>
+              <FaTrash />
+            </div>
+          </S.TdProductItem>
+        </tr>
+        <tr>
+          <S.TdProductItem>
+            <S.ImgColumn
+              src="https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png"
+              alt="exemple"
+            />
+            <div>
+              <span>Viuva Negra</span>
+              <span className="price">R$ 29,99</span>
+            </div>
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <AiOutlineMinusCircle />
+            <S.InputColumn type="text" name="qty" value={1} />
+            <AiOutlinePlusCircle />
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <div className="subtotal">
+              <span>R$ 29,99</span>
+              <FaTrash />
+            </div>
+          </S.TdProductItem>
+        </tr>
+        <tr>
+          <S.TdProductItem>
+            <S.ImgColumn
+              src="https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png"
+              alt="exemple"
+            />
+            <div>
+              <span>Viuva Negra</span>
+              <span className="price">R$ 29,99</span>
+            </div>
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <AiOutlineMinusCircle />
+            <S.InputColumn type="text" name="qty" value={1} />
+            <AiOutlinePlusCircle />
+          </S.TdProductItem>
+          <S.TdProductItem>
+            <div className="subtotal">
+              <span>R$ 29,99</span>
+              <FaTrash />
+            </div>
+          </S.TdProductItem>
+        </tr>
       </S.TableStyled>
     </S.MainContainer>
   );

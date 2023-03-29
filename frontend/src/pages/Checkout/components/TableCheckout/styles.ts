@@ -15,14 +15,11 @@ export const TableStyled = styled.table`
       text-align: start;
     }
 
-    th {
-      margin-bottom: 20px;
-    }
-
     tr {
       display: grid;
       grid-template-columns: 2.5fr 1.5fr 2fr;
       width: 100%;
+      margin-bottom: 20px;
     }
   `}
 `;
