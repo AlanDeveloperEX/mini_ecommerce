@@ -24,6 +24,7 @@ const ShoppingCartContext = createContext({} as ShoppingCartContext);
 export function useShoppingCart() {
   return useContext(ShoppingCartContext);
 }
+
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
     "shopping-cart",
