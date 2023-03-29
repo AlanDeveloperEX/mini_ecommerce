@@ -41,3 +41,18 @@ export const PriceCard = styled.p`
     text-align: center;
   `}
 `;
+
+export const CartBtnQty = styled.span`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 100;
+    color: ${theme.colors.default_white};
+
+    svg {
+      margin: 4px;
+    }
+  `}
+`;
