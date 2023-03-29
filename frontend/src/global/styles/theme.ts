@@ -2,6 +2,7 @@ export default {
   colors: {
     default_white: "#fff",
     default_gray: "#999999",
+    default_blue: "#009EDD",
     default_text: "#333333",
     default_background: "#2F2E41",
     background_btn: "#009EDD",
