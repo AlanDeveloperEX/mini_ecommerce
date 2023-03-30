@@ -1,14 +1,9 @@
 import { createContext, ReactNode, useContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { CartItem } from "../models.ts/cart";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
-};
-
-type CartItem = {
-  id: number;
-  quantity: number;
-  price?: number;
 };
 
 type ShoppingCartContext = {

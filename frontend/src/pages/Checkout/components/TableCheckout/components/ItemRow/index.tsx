@@ -2,10 +2,15 @@ import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa";
 import { useShoppingCart } from "../../../../../../context/CartContext";
 import { useProducts } from "../../../../../../context/ProductsContext";
+import { ProductProps } from "../../../../../../models.ts/product";
 import { convertNumberToBRL } from "../../../../../../utils/numberToBRL";
 import * as S from "./styles";
 
-const ItemRow: React.FC<any> = ({ id }) => {
+type ItemRowProps = {
+  id: number;
+};
+
+const ItemRow: React.FC<ItemRowProps> = ({ id }) => {
   const {
     getItemQuantity,
     decreaseCartQuantity,
@@ -14,7 +19,7 @@ const ItemRow: React.FC<any> = ({ id }) => {
   } = useShoppingCart();
   const { movieProductItems } = useProducts();
 
-  const item = movieProductItems.find((i: any) => i.id === id);
+  const item = movieProductItems.find((i: ProductProps) => i.id === id);
   if (item === null) return null;
 
   const qtyItem = getItemQuantity(id);

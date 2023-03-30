@@ -1,6 +1,8 @@
 import Loading from "../../components/Atoms/Loading";
 import Card from "../../components/Mols/Card";
 import { useProducts } from "../../context/ProductsContext";
+import { CardProps } from "../../models.ts/card";
+import { ProductProps } from "../../models.ts/product";
 import { DefaultLayout } from "../_layout/DefaultLayout";
 import * as S from "./styles";
 
@@ -16,10 +18,10 @@ const Home: React.FC = () => {
       ) : (
         <S.MainContainer>
           {movieProductItems !== null &&
-            movieProductItems.map((item: any, key: number) => (
+            movieProductItems.map((item: CardProps, key: number) => (
               <Card
                 key={key}
-                Title={item.title}
+                title={item.title}
                 imgToShow={item.image}
                 imgAlt={item.title}
                 priceItem={item.price}

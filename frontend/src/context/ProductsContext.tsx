@@ -6,6 +6,7 @@ import {
   useCallback,
   useState,
 } from "react";
+import { ProductProps } from "../models.ts/product";
 import api from "../services/api";
 
 type ProductsProviderProps = {
@@ -14,7 +15,7 @@ type ProductsProviderProps = {
 
 type ProductsContext = {
   isLoading: boolean;
-  movieProductItems: any;
+  movieProductItems: ProductProps[] | null | any;
 };
 
 const ProductsContext = createContext({} as ProductsContext);

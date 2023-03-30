@@ -3,17 +3,10 @@ import Button from "../../Atoms/Button";
 import * as S from "./styles";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useShoppingCart } from "../../../context/CartContext";
-
-type CardProps = {
-  Title: string;
-  imgToShow: string;
-  imgAlt: string;
-  priceItem: number;
-  id: number;
-};
+import { CardProps } from "../../../models.ts/card";
 
 const Card: React.FC<CardProps> = ({
-  Title,
+  title,
   imgToShow,
   imgAlt,
   priceItem,
@@ -26,7 +19,7 @@ const Card: React.FC<CardProps> = ({
       <figure>
         <S.ImgCard src={imgToShow} alt={imgAlt} />
       </figure>
-      <S.TitleCard>{Title}</S.TitleCard>
+      <S.TitleCard>{title}</S.TitleCard>
       <S.PriceCard>{convertNumberToBRL(priceItem)}</S.PriceCard>
       {qtdy === 0 ? (
         <Button onClick={() => increaseCartQuantity(id)}>

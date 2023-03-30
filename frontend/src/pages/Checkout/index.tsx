@@ -9,6 +9,7 @@ import Button from "../../components/Atoms/Button";
 import { useShoppingCart } from "../../context/CartContext";
 import { convertNumberToBRL } from "../../utils/numberToBRL";
 import { useProducts } from "../../context/ProductsContext";
+import { ProductProps } from "../../models.ts/product";
 
 const Checkout: React.FC = () => {
   const [showWarning, setShowWarning] = useState<string>("");
@@ -65,7 +66,7 @@ const Checkout: React.FC = () => {
                 {convertNumberToBRL(
                   cartItems.reduce((total, cartItem) => {
                     const item = movieProductItems.find(
-                      (i: any) => i.id === cartItem.id
+                      (i: ProductProps) => i.id === cartItem.id
                     );
                     return total + (item?.price || 0) * cartItem.quantity;
                   }, 0)
