@@ -1,7 +1,8 @@
 # About Project
 
-<img width="100%" src="https://ibb.co/TLnbZfG">
-<img width="100%" src="https://ibb.co/d5KVS75">
+<img width="100%" src="https://i.ibb.co/FVf09r1/home.jpg">
+
+<img width="100%" src="https://i.ibb.co/z4fB1N4/checkout.jpg">
 
 Mini Ecommerce flow to show skills with typescript, react and styled-components
 
@@ -26,6 +27,7 @@ Create an .env file and insert the content that is in .sample.env in frontend fo
 ## Available Scripts
 
 **Before run the scripts, run yarn to update/install all dependences**
+
 **Make sure that backend is started**
 
 In the project directory, you can run:
