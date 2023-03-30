@@ -3,7 +3,14 @@ import Button from "../../Atoms/Button";
 import * as S from "./styles";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useShoppingCart } from "../../../context/CartContext";
-import { CardProps } from "../../../models.ts/card";
+
+type CardProps = {
+  title: string;
+  imgToShow: string;
+  imgAlt: string;
+  priceItem: string | number | any;
+  id: number;
+};
 
 const Card: React.FC<CardProps> = ({
   title,

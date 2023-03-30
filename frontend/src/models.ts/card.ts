@@ -3,7 +3,7 @@ export type CardProps = {
   image?: string;
   imgToShow?: string;
   imgAlt?: string;
-  priceItem?: number;
+  priceItem?: string | number;
   price?: number;
-  id: number;
+  id?: number;
 };
