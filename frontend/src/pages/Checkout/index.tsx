@@ -7,10 +7,13 @@ import EmptyImg from "../../assets/empty_cart.svg";
 import TableCheckout from "./components/TableCheckout";
 import Button from "../../components/Atoms/Button";
 import { useShoppingCart } from "../../context/CartContext";
+import { convertNumberToBRL } from "../../utils/numberToBRL";
+import { useProducts } from "../../context/ProductsContext";
 
 const Checkout: React.FC = () => {
   const [showWarning, setShowWarning] = useState<string>("");
   const { cartItems, resetCart } = useShoppingCart();
+  const { movieProductItems } = useProducts();
 
   useEffect(() => {
     cartItems.length === 0 && showWarning !== "success"
@@ -59,7 +62,14 @@ const Checkout: React.FC = () => {
               <Button onClick={HandleCheckout}>FINALZIAR PEDIDO</Button>
               <p>
                 <span>TOTAL</span>
-                R$ 29,99
+                {convertNumberToBRL(
+                  cartItems.reduce((total, cartItem) => {
+                    const item = movieProductItems.find(
+                      (i: any) => i.id === cartItem.id
+                    );
+                    return total + (item?.price || 0) * cartItem.quantity;
+                  }, 0)
+                )}
               </p>
             </S.TotalContainer>
           </S.MainContainer>
