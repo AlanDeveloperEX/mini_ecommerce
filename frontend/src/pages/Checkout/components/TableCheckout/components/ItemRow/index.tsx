@@ -20,26 +20,31 @@ const ItemRow: React.FC<any> = ({ id }) => {
   const qtyItem = getItemQuantity(id);
 
   return (
-    <tr>
-      <S.TdProductItem>
+    <S.TrProductItem>
+      <S.TdProductItem className="col-product">
         <S.ImgColumn src={item.image} alt="exemple" />
         <div>
           <span>{item.title}</span>
           <span className="price">{convertNumberToBRL(item.price)}</span>
         </div>
       </S.TdProductItem>
-      <S.TdProductItem>
+
+      <S.TdProductItem className="col-qty">
         <AiOutlineMinusCircle onClick={() => decreaseCartQuantity(id)} />
         <S.InputColumn type="text" name="qty" value={qtyItem} readOnly />
         <AiOutlinePlusCircle onClick={() => increaseCartQuantity(id)} />
       </S.TdProductItem>
-      <S.TdProductItem>
+
+      <S.TdProductItem className="col-subtotal">
         <div className="subtotal">
-          <span>{convertNumberToBRL(item.price * qtyItem)}</span>
+          <div className="sub-wrap">
+            <span className="subtotal-mobile">SUBTOTAL</span>
+            <span>{convertNumberToBRL(item.price * qtyItem)}</span>
+          </div>
           <FaTrash onClick={() => removeFromCart(id)} />
         </div>
       </S.TdProductItem>
-    </tr>
+    </S.TrProductItem>
   );
 };
 

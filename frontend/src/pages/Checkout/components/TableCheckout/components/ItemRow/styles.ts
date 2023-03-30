@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components";
 
+export const TrProductItem = styled.tr`
+  position: relative;
+`;
+
 export const TdProductItem = styled.td`
   ${({ theme }) => css`
     display: flex;
@@ -14,6 +18,10 @@ export const TdProductItem = styled.td`
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
+
+        span.subtotal-mobile {
+          display: none;
+        }
       }
 
       span {
@@ -37,8 +45,48 @@ export const TdProductItem = styled.td`
     }
 
     @media (max-width: ${theme.breakpoints.sm}px) {
-      display: flex;
-      flex-wrap: wrap;
+      &.col-product {
+        width: 100%;
+        align-items: flex-start;
+        div {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          span.price {
+            margin-right: -30px;
+          }
+        }
+      }
+      &.col-qty {
+        position: absolute;
+        position: absolute;
+        bottom: 6px;
+        left: 78px;
+      }
+      &.col-subtotal {
+        align-items: flex-start;
+        div.subtotal {
+          flex-direction: column-reverse;
+          align-items: flex-end;
+          gap: 16px;
+
+          div.sub-wrap {
+            font-weight: 700;
+            font-size: 14px;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+          }
+
+          span.subtotal-mobile {
+            display: flex;
+            color: ${theme.colors.default_gray};
+          }
+        }
+      }
     }
   `}
 `;
@@ -57,7 +105,7 @@ export const ImgColumn = styled.img`
     margin-right: 50px;
 
     @media (max-width: ${theme.breakpoints.sm}px) {
-      width: 90px;
+      width: 62px;
       margin-right: 16px;
     }
   `}

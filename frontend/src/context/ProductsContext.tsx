@@ -13,7 +13,7 @@ type ProductsProviderProps = {
 };
 
 type ProductsContext = {
-  isLoading: any;
+  isLoading: boolean;
   movieProductItems: any;
 };
 
@@ -24,7 +24,7 @@ export function useProducts() {
 }
 
 export function ProductsProvider({ children }: ProductsProviderProps) {
-  const [movieProductItems, setMovieProductItems] = useState<any>(null);
+  const [movieProductItems, setMovieProductItems] = useState(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getMovies = useCallback(() => {
