@@ -1,8 +1,8 @@
-# About Project
-
 <img width="100%" src="https://i.ibb.co/FVf09r1/home.jpg">
 
 <img width="100%" src="https://i.ibb.co/z4fB1N4/checkout.jpg">
+
+# About Project
 
 Mini Ecommerce flow to show skills with typescript, react and styled-components
 
