@@ -17,6 +17,13 @@ export const Container = styled.div<ContainerProps>`
 
     width: 100%;
     height: fit-content;
+
+    figure {
+      background-color: ${theme.colors.default_gray};
+      height: 192px;
+      width: 150px;
+      border-radius: 4px;
+    }
   `}
 `;
 
